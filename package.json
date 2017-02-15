@@ -1,0 +1,10 @@
+{
+  "name": "find_Custom_WidgetsA",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
