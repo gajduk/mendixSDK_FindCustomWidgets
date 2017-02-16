@@ -1,0 +1,63 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Connect to project</h1>
+    </header>
+ 
+    <form class="project-details" style="margin-bottom: 50px">       
+      <div class="project-input-wrapper">
+        <div class="project_input">           
+          <label for="username" class="alabel">Username:</label>
+          <input alt="ASD" title="Enter the email you use to login to Mendix" id="username" type="text" name="username" placeholder="your.name@example.com" required/>
+        </div>         
+        <div class="project_input">           
+          <label for="api-key" class="alabel">API-key:</label>           
+          <input id="api-key" type="text" name="api_key" title="Enter a valid api key from your mendix account" placeholder="lots of chars" required/>
+        </div>         
+        <div class="project_input">           
+          <label for="project-id" class="alabel">Project ID:</label>           
+          <input id="project-id" type="text" name="project_id" title="Enter the Project ID, in mendix Project dashbord go to Project settings" placeholder="lots of chars" required/>      
+        </div>       
+      </div>
+      
+      <input id="submit_btn" type="submit" value="Connect" style="float:right; margin-right: 52px;"/> 
+
+    </form>
+    <div id="please_wait" style="display: none; font-size: 25px; font-style: italic;">
+      
+    </div>
+    <div id="error" style="font-size: 22px; color: red;">
+
+    </div>
+    <div id="res">
+
+    </div>
+
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span id="close_button" class="close">&times;</span>
+      <div >
+        <h2 id="modal_title"></h2>
+        <textarea id="all_files" cols="80" rows="20">
+        </textarea>
+      </div>
+    </div>
+
+  </div>
+  <div style="display: inline-block; position:absolute; left: 650px; bottom:20px; height:20px; background:#ddd;">
+    Developed with the help of Mendix SDK and Meteor.
+  </div>
+  <script>
+    var modal = document.getElementById('myModal');
+
+    var span = document.getElementById("close_button");
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+  </script>
+</body>
+ 
